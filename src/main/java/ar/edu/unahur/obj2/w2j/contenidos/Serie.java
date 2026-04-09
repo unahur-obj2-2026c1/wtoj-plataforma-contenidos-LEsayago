@@ -6,8 +6,8 @@ public class Serie extends Conteniido {
 
     private ArrayList<Temporada> temporadas;
 
-    public Serie(String titulo, double costoBaseDeLicencia) {
-        super(titulo, costoBaseDeLicencia);
+    public Serie(String titulo, Double costoBase) {
+        super(titulo, costoBase);
         this.temporadas = new ArrayList<>();
     }
 
