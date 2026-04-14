@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.w2j.contenidos;
 
-public class Documental extends Conteniido {
+public class Documental extends Contenido {
     
     
    

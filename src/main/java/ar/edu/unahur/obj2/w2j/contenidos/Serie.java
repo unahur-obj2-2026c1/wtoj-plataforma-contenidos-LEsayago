@@ -1,4 +1,4 @@
-/*package ar.edu.unahur.obj2.w2j.contenidos;
+package ar.edu.unahur.obj2.w2j.contenidos;
 
 import java.util.ArrayList;
 
@@ -25,54 +25,6 @@ public class Serie extends Conteniido {
 
 }
 
-public class Temporada {
- 
-    private int cantidadDeEpisodios;
-    private ArrayList<Episodio> episodios;
-
-     public Temporada(int cantidadDeEpisodios) {
-        this.cantidadDeEpisodios = cantidadDeEpisodios;
-    }
-
-     public int getCantidadDeEpisodios() {
-        return cantidadDeEpisodios;
-    }
-
-     public void setCantidadDeEpisodios(int cantidadDeEpisodios) {
-         this.cantidadDeEpisodios = cantidadDeEpisodios;
-     }
-     
-  }
-
-
-public class Episodio {
-    
-    private String titulo;
-    private int numero;
-
-    public Episodio(String titulo, int numero) {
-        this.titulo = titulo;
-        this.numero = numero;
-    }
-    
-    public String getTitulo() {
-            return titulo;
-    }
-    
-    public void setTitulo(String titulo) {
-            this.titulo = titulo;
-    }
-    
-    public int getNumero() {
-            return numero;
-    }
-    
-    public void setNumero(int numero) {
-            this.numero = numero;
-    }
-}
-
-
 public ArrayList<Temporada> getTemporadas() {
     return temporadas;
 }
@@ -80,4 +32,9 @@ public ArrayList<Temporada> getTemporadas() {
 public void setTemporadas(ArrayList<Temporada> temporadas) {
     this.temporadas = temporadas;
 }
-*/
+
+@Override
+public Double doCosto() {
+
+
+   }
