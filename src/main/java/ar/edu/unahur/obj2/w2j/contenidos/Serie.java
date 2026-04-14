@@ -34,8 +34,13 @@ public void setTemporadas(ArrayList<Temporada> temporadas) {
 }
 
 @Override
-public Double doCosto() {
-return null;
+public Double doCosto() {;
+  Double costoPromedioTotal=0.0;
+    for (Temporada temporada : temporadas) {
+        costoPromedioTotal += temporada.costoPromedioDeEpisodio();
 
-   }
+    }
+
+    return costoPromedioTotal == 0 ? 0 : costoPromedioTotal / getCantidadDeTemporadas();
+}
 }

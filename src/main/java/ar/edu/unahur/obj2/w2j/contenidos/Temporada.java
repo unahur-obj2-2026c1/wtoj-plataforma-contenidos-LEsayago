@@ -1,22 +1,41 @@
 package ar.edu.unahur.obj2.w2j.contenidos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Temporada {
- 
-    private int cantidadDeEpisodios;
-    private List<Episodio> episodios;
+    private int numero;
+    private List<Episodio> episodios = new ArrayList<>();
 
-     public Temporada(int cantidadDeEpisodios) {
-        this.cantidadDeEpisodios = cantidadDeEpisodios;
+    public Temporada(int numero) {
+        this.numero = numero;
     }
 
-     public int getCantidadDeEpisodios() {
-        return cantidadDeEpisodios;
+    public void agregarEpisodio(Episodio e) {
+        episodios.add(e);
     }
 
-     public void setCantidadDeEpisodios(int cantidadDeEpisodios) {
-         this.cantidadDeEpisodios = cantidadDeEpisodios;
-     }
-     
-  }
+    public List<Episodio> getEpisodios() {
+        return episodios;
+    }
+
+    public Double costo() {
+        Double costoTotal = 0.0;
+        for (Episodio episodio : episodios) {
+            costoTotal += episodio.getCosto();
+        }
+        return costoTotal;
+    }
+
+    public int cantidadDeEpisodios() {
+        return episodios.size();
+    }
+
+    public Double costoPromedioDeEpisodio() {
+        if (episodios.isEmpty()) {
+            return 0.0;
+        }
+        return costo() / cantidadDeEpisodios();
+    }
+
+}

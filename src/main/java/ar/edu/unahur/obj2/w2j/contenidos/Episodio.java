@@ -5,10 +5,20 @@ public class Episodio {
     
     private String titulo;
     private int numero;
+    private Double costo;
 
-    public Episodio(String titulo, int numero) {
+    public Episodio(String titulo, int numero, Double costo) {
         this.titulo = titulo;
         this.numero = numero;
+        this.costo = costo;
+    }
+
+    public Double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(Double costo) {
+        this.costo = costo;
     }
     
     public String getTitulo() {
