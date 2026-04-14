@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.w2j.contenidos;
 
 import java.util.ArrayList;
 
-public class Serie extends Conteniido {
+public class Serie extends Contenido {
 
     private ArrayList<Temporada> temporadas;
 
@@ -35,6 +35,7 @@ public void setTemporadas(ArrayList<Temporada> temporadas) {
 
 @Override
 public Double doCosto() {
-
+return null;
 
    }
+}

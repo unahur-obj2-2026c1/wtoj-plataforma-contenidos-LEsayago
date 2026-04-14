@@ -37,6 +37,6 @@ public abstract class Contenido {
     }
 
     //metodo abstracto doCosto()
-    protected abstract Double doCosto();
+    public abstract Double doCosto();
 
 }
