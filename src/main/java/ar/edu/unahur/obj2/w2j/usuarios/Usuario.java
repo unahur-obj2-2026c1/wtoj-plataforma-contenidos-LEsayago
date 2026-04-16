@@ -47,4 +47,8 @@ public class Usuario {
         return plan;
     }
 
+    public Double costoMensual() {
+        return plan.costoDelplan(this);
+    }
+
 }
