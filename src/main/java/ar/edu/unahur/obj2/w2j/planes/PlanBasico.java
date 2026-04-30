@@ -5,7 +5,7 @@ import java.util.List;
 import ar.edu.unahur.obj2.w2j.contenidos.Contenido;
 import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 
-public class PlanBasico implements IPlan {
+public class PlanBasico implements PlanStrategy {
 
     private Integer limite;
     private Double costoBase = 5.0;
