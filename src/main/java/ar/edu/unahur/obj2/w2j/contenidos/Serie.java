@@ -27,7 +27,6 @@ public class Serie extends Contenido {
 public ArrayList<Temporada> getTemporadas() {
     return temporadas;
 }
-
 @Override
 public Double doCosto() {;
     /* 
@@ -47,4 +46,5 @@ public Double doCosto() {;
     .orElse(0.0);
 
 
+}
 }

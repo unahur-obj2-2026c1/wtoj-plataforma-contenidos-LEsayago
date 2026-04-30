@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Temporada {
-    private int numero;
+    private final Integer numero;
     private List<Episodio> episodios = new ArrayList<>();
 
-    public Temporada(int numero) {
+    public Temporada(Integer numero) {
         this.numero = numero;
     }
 
@@ -20,10 +20,14 @@ public class Temporada {
     }
 
     public Double costo() {
+        
         Double costoTotal = 0.0;
+        /*
         for (Episodio episodio : episodios) {
             costoTotal += episodio.getCosto();
-        }
+        }*/
+        
+
         return costoTotal;
     }
 
