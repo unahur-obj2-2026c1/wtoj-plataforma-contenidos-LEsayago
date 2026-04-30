@@ -51,4 +51,8 @@ public class Usuario {
         return plan.costoDelplan(this);
     }
 
+    public void limpiarContenidos() {
+        contenidos.clear();
+    }
+
 }
