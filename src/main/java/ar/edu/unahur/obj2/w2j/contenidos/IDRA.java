@@ -20,5 +20,5 @@ public class IDRA {
     public void setValor(Double valor) {
         this.valor = valor;
     }
-
+    
 }

@@ -15,13 +15,12 @@ public class Serie extends Contenido {
         return temporadas;
     }
 
-     public void settemporadas(ArrayList<Temporada> temporadas) {
-        this.temporadas = temporadas;
+     public void settemporadas( Temporada temporada) {
+        temporadas.add(temporada);
     }
 
      public int getCantidadDeTemporadas() {
         return temporadas.size();
-    
 
 }
 
@@ -29,12 +28,9 @@ public ArrayList<Temporada> getTemporadas() {
     return temporadas;
 }
 
-public void setTemporadas(ArrayList<Temporada> temporadas) {
-    this.temporadas = temporadas;
-}
-
 @Override
 public Double doCosto() {;
+    /* 
   Double costoPromedioTotal=0.0;
     for (Temporada temporada : temporadas) {
         costoPromedioTotal += temporada.costoPromedioDeEpisodio();
@@ -42,5 +38,13 @@ public Double doCosto() {;
     }
 
     return costoPromedioTotal == 0 ? 0 : costoPromedioTotal / getCantidadDeTemporadas();
-}
+} */
+
+    return temporadas.stream()
+    .flatMap(t -> t.getEpisodios().stream())
+    .mapToDouble(Episodio :: getCosto)
+    .average()
+    .orElse(0.0);
+
+
 }
