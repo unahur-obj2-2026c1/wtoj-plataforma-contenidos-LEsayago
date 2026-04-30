@@ -19,16 +19,19 @@ public class Temporada {
         return episodios;
     }
 
+    /**
+     * @return
+     */
     public Double costo() {
-        
-        Double costoTotal = 0.0;
+    
         /*
         for (Episodio episodio : episodios) {
             costoTotal += episodio.getCosto();
         }*/
-        
 
-        return costoTotal;
+        return   episodios.stream()
+                .mapToDouble(Episodio::getCosto)
+                .sum();
     }
 
     public int cantidadDeEpisodios() {
